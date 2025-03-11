@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="images/P-icon.png" />
+    <link rel="shortcut icon" href="images/P-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Student Projects - Preface</title>
+    <title>Student Music Video Gallery - Preface</title>
     <style>
       body {
         font-family: "Montserrat", sans-serif;
@@ -88,127 +88,90 @@
     <div id="cardContainer" class="container"></div>
     <script>
       const imageMap = {
-        "App Inventor Minecraft Video Recording": "images/Ellie Wong.png",
-        "Tetris in Chrome extension": "images/Kayley Kwok.png",
-        "MTR project": "images/Neo.png",
-        "Space Invader": "images/Chester.png",
-        "Comic Nostalgia Gang": "images/Caleb.png",
-        "Memory Game": "images/Emma.jpeg",
-        Portfolio: "images/Emma.jpeg",
-        ChatApp: "images/Neo.png",
-        "Optical Illusion": "images/Junghu.jpeg",
-        "Ethan's Scratch Recycling Game": "images/EthanZheng.jpeg",
-        "NBA Data Analysis": "images/Evan Lam.png",
-        "2048 game": "images/Evan Lam.png",
-        "Liverpool Website": "images/Jayden Heng.png",
-        FUNLAND: "images/Alicia.png",
-        "Amelia's Station": "images/Amelia.png",
-        "School Club Slides made by Kelbee!": "images/Kelbee.png",
-        "Treasure Hunt": "images/Enoch Chiu.png",
-        "Space Invendor Game": "images/Gareth-game.png",
-        "Creative Media Design Final Project": "images/Gareth-video.png",
-        "Screen Recording of Football Analysis": "images/Ethan Yip.png",
-        "Save The Ocean - Julien's Twist": "images/Julien Tsang.png",
-        "2 Snack Game Video Recording": "images/Roy Chi.png",
-        "Card Game": "images/Nok Yin.png",
-        "Portfolio Website": "images/Evan Lam.png",
-        "App Inventor + Minecraft HTML website": "images/Marquis.png",
+        "Teddy Cheng Music Video": "images/Felicia Chiu.png",
+        "Audrey Au Music Video": "images/Ellie Wong.png",
+        "Ethan Lee Music Video": "images/Ellie Wong.png",
+        "Ian Cho Music Video": "images/Ellie Wong.png",
+        "Ethan Lam Music Video": "images/Ellie Wong.png",
+        "Felicia Chu Music Video": "images/Ellie Wong.png",
+        "Hay Yin Keefe Yip Music Video": "images/Ellie Wong.png",
+        "Curtis Wong Music Video": "images/Ellie Wong.png",
+        "Jonas Chiu Music Video": "images/Ellie Wong.png",
+        "Emmanuel Wong Music Video": "images/Ellie Wong.png",
+        "Tin Yat Javen Hooi Music Video": "images/Ellie Wong.png",
+        "Shing Hei Elvis Cheng Music Video": "images/Ellie Wong.png",
+        "Kit Man Chester Tam Music Video": "images/Ellie Wong.png",
+        "Nathan Tsui Music Video": "images/Ellie Wong.png",
+        "Huanyun Tommy Zhang Music Video": "images/Felicia Chiu.png",
       };
 
       const studentNames = {
-        "App Inventor Minecraft Video Recording": "Ellie Wong",
-        "Tetris in Chrome extension": "Kayley Kwok",
-        "MTR project": "Ka Him Leung",
-        "Space Invader": "Chester Tam",
-        "Comic Nostalgia Gang": "Caleb Hui",
-        "Memory Game": "Emma Hunt",
-        Portfolio: "Emma Hunt",
-        ChatApp: "Neo Lung",
-        "Optical Illusion": "JungHu",
-        "Ethan's Scratch Recycling Game": "Ethan Zheng",
-        "NBA Data Analysis": "Elvin Cheung",
-        "2048 game": "Elvin Cheung",
-        "Liverpool Website": "Jayden Heng",
-        FUNLAND: "Alicia Tan",
-        "Amelia's Station": "Amelia Tan",
-        "School Club Slides made by Kelbee!": "Kelbee Fok",
-        "Treasure Hunt": "Enoch Chiu",
-        "Space Invendor Game": "Gareth Li",
-        "Creative Media Design Final Project": "Gareth Li",
-        "Screen Recording of Football Analysis": "Ethan Yip",
-        "Save The Ocean - Julien's Twist": "Julien Tsang",
-        "2 Snack Game Video Recording": "Roy Chi",
-        "Card Game": "Nok Yin Lim",
-        "Portfolio Website": "Evan Lam",
-        "App Inventor + Minecraft HTML website": "Marquis Chan",
+        "Teddy Cheng Music Video": "Teddy Cheng",
+        "Audrey Au Music Video": "Audrey Au",
+        "Ethan Lee Music Video": "Ethan Lee",
+        "Ian Cho Music Video": "Ian Cho",
+        "Ethan Lam Music Video": "Ethan Lam",
+        "Felicia Chu Music Video": "Felicia Chu",
+        "Hay Yin Keefe Yip Music Video": "Hay Yin Keefe Yip",
+        "Curtis Wong Music Video": "Curtis Wong",
+        "Jonas Chiu Music Video": "Jonas Chiu",
+        "Emmanuel Wong Music Video": "Emmanuel Wong",
+        "Tin Yat Javen Hooi Music Video": "Tin Yat Javen Hooi",
+        "Shing Hei Elvis Cheng Music Video": "Shing Hei Elvis Cheng",
+        "Kit Man Chester Tam Music Video": "Kit Man Chester Tam",
+        "Nathan Tsui Music Video": "Nathan Tsui",
+        "Huanyun Tommy Zhang Music Video": "Huanyun Tommy Zhang",
       };
 
       const links = {
-        "App Inventor Minecraft Video Recording":
+        "Teddy Cheng Music Video":
           "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
-        "Tetris in Chrome extension":
-          "https://chromewebstore.google.com/detail/sirtet/ihladjbfkfejijomgfncgjgdlkaggkie",
-        "MTR project": "https://stevenleung124.itch.io/hkr-on-the-go",
-        "Space Invader": "https://chestnut-god.itch.io/space-invaders",
-        "Comic Nostalgia Gang": "https://bit.ly/comicNostalgiaGang",
-        "Memory Game": "https://227560em.github.io/Memory-Game/",
-        Portfolio: "https://227560em.github.io/Web-Development-Portfolio/",
-        ChatApp:
-          "https://drive.google.com/file/d/1VcyvbGewM8lwsHaGgsAvjZJDmTIAetyQ/view?usp=drive_link",
-        "Optical Illusion": "https://ai2.appinventor.mit.edu/#4880069958893568",
-        "Ethan's Scratch Recycling Game":
-          "https://scratch.mit.edu/projects/1132224587",
-        "NBA Data Analysis":
-          "https://drive.google.com/file/d/1WKo9cmM-KeUHwm8oHgKpHq0WDRBPyH0N/view?usp=drive_link",
-        "2048 game": "https://2048-sepia-nine.vercel.app/",
-        "Liverpool Website": "https://liverpooldream.netlify.app/",
-        FUNLAND: "https://scratch.mit.edu/projects/984574965/",
-        "Amelia's Station": "https://scratch.mit.edu/projects/970033341/",
-        "School Club Slides made by Kelbee!":
-          "https://docs.google.com/presentation/d/1tm6m9VoGVDXiYpaz4RsWElh671dvYel0tFItPimkpDU/edit#slide=id.p1",
-        "Treasure Hunt": "https://enochc.itch.io/treasure-hunt",
-        "Space Invendor Game":
-          "https://drive.google.com/file/d/1rRCWFOZSndDDk3irOjtfW3OlRmPeJdwD/view?usp=drive_link",
-        "Creative Media Design Final Project":
-          "https://drive.google.com/file/d/12T7uTmajt-_Q6xSQvW3x0OVGquH6mJv5/view?usp=drive_link",
-        "Screen Recording of Football Analysis":
-          "https://drive.google.com/file/d/1WGZFeiG0CK92lczet-RmaW9gjvWqzk3P/view?usp=drive_link",
-        "Save The Ocean - Julien's Twist":
-          "https://drive.google.com/file/d/1XtQYX66nbhYKVozAI-u7TcU5wYRU288H/view?usp=drive_link",
-        "2 Snack Game Video Recording":
-          "https://drive.google.com/drive/folders/19mFa3V8UUnISzy8vqMFSufKr3-p0Cm2X",
-        "Card Game": "https://github.com/nokyinlim/card-game",
-        "Portfolio Website": "https://superel123.github.io/Portfolio/",
-        "App Inventor + Minecraft HTML website":
-          "https://drive.google.com/file/d/1CtefFzzBEvCwWhul7xNKYACjcMhcb2v1/view",
+        "Audrey Au Music Video":
+          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
+        "Ethan Lee Music Video":
+          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
+        "Ian Cho Music Video":
+          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
+        "Ethan Lam Music Video":
+          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
+        "Felicia Chu Music Video":
+          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
+        "Hay Yin Keefe Yip Music Video":
+          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
+        "Curtis Wong Music Video":
+          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
+        "Jonas Chiu Music Video":
+          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
+        "Emmanuel Wong Music Video":
+          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
+        "Tin Yat Javen Hooi Music Video":
+          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
+        "Shing Hei Elvis Cheng Music Video":
+          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
+        "Kit Man Chester Tam Music Video":
+          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
+        "Nathan Tsui Music Video":
+          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
+        "Huanyun Tommy Zhang Music Video":
+          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",                          
       };
 
       const projects = [
-        "App Inventor Minecraft Video Recording",
-        "Tetris in Chrome extension",
-        "MTR project",
-        "Space Invader",
-        "Comic Nostalgia Gang",
-        "Memory Game",
-        "Portfolio",
-        "ChatApp",
-        "Optical Illusion",
-        "Ethan's Scratch Recycling Game",
-        "NBA Data Analysis",
-        "2048 game",
-        "Liverpool Website",
-        "FUNLAND",
-        "Amelia's Station",
-        "School Club Slides made by Kelbee!",
-        "Treasure Hunt",
-        "Space Invendor Game",
-        "Creative Media Design Final Project",
-        "Screen Recording of Football Analysis",
-        "Save The Ocean - Julien's Twist",
-        "2 Snack Game Video Recording",
-        "Card Game",
-        "Portfolio Website",
-        "App Inventor + Minecraft HTML website",
+        "Teddy Cheng Music Video",
+        "Audrey Au Music Video",
+        "Ethan Lee Music Video",
+        "Ian Cho Music Video",
+        "Ethan Lam Music Video",
+        "Felicia Chu Music Video",
+        "Hay Yin Keefe Yip Music Video",
+        "Curtis Wong Music Video",
+        "Jonas Chiu Music Video",
+        "Emmanuel Wong Music Video",
+        "Tin Yat Javen Hooi Music Video",
+        "Shing Hei Elvis Cheng Music Video",
+        "Kit Man Chester Tam Music Video",
+        "Nathan Tsui Music Video",
+        "Huanyun Tommy Zhang Music Video",
       ];
 
       const cardContainer = document.getElementById("cardContainer");
