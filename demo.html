@@ -88,90 +88,66 @@
     <div id="cardContainer" class="container"></div>
     <script>
       const imageMap = {
-        "Teddy Cheng Music Video": "images/Felicia Chiu.png",
-        "Audrey Au Music Video": "images/Ellie Wong.png",
-        "Ethan Lee Music Video": "images/Ellie Wong.png",
-        "Ian Cho Music Video": "images/Ellie Wong.png",
-        "Ethan Lam Music Video": "images/Ellie Wong.png",
-        "Felicia Chu Music Video": "images/Ellie Wong.png",
-        "Hay Yin Keefe Yip Music Video": "images/Ellie Wong.png",
-        "Curtis Wong Music Video": "images/Ellie Wong.png",
-        "Jonas Chiu Music Video": "images/Ellie Wong.png",
-        "Emmanuel Wong Music Video": "images/Ellie Wong.png",
-        "Tin Yat Javen Hooi Music Video": "images/Ellie Wong.png",
-        "Shing Hei Elvis Cheng Music Video": "images/Ellie Wong.png",
-        "Kit Man Chester Tam Music Video": "images/Ellie Wong.png",
-        "Nathan Tsui Music Video": "images/Ellie Wong.png",
-        "Huanyun Tommy Zhang Music Video": "images/Felicia Chiu.png",
+        "Felicia Chiu Music Video": "images/Felicia Chiu.png",
+        "Abby Yu Music Video": "images/Felicia Chiu.png",
+        "Caitlyn Cheung Music Video": "images/Felicia Chiu.png",
+        "Curtis Wong Music Video": "images/Felicia Chiu.png",
+        "Everest Cannon Music Video": "images/Felicia Chiu.png",
+        "Felicia Chiu Music Video": "images/Felicia Chiu.png",
+        "Jasper Lee Music Video": "images/Felicia Chiu.png",
+        "Krystal Lam Music Video": "images/Felicia Chiu.png",
+        "Marcus Cheung Music Video": "images/Felicia Chiu.png",
+        "Nathan Tsui Music Video": "images/Felicia Chiu.png",
+        "Audrey Au Music Video": "images/Felicia Chiu.png",
       };
 
       const studentNames = {
-        "Teddy Cheng Music Video": "Teddy Cheng",
-        "Audrey Au Music Video": "Audrey Au",
-        "Ethan Lee Music Video": "Ethan Lee",
-        "Ian Cho Music Video": "Ian Cho",
-        "Ethan Lam Music Video": "Ethan Lam",
-        "Felicia Chu Music Video": "Felicia Chu",
-        "Hay Yin Keefe Yip Music Video": "Hay Yin Keefe Yip",
+        "Abby Yu Music Video": "Teddy Cheng",
+        "Caitlyn Cheung Music Video": "Caityln Cheung",
         "Curtis Wong Music Video": "Curtis Wong",
-        "Jonas Chiu Music Video": "Jonas Chiu",
-        "Emmanuel Wong Music Video": "Emmanuel Wong",
-        "Tin Yat Javen Hooi Music Video": "Tin Yat Javen Hooi",
-        "Shing Hei Elvis Cheng Music Video": "Shing Hei Elvis Cheng",
-        "Kit Man Chester Tam Music Video": "Kit Man Chester Tam",
+        "Everest Cannon Music Video": "Everest Cannon",
+        "Felicia Chiu Music Video": "Felicia Chiu",
+        "Jasper Lee Music Video": "Jasper Lee",
+        "Krystal Lam Music Video": "Krystal Lam",
+        "Marcus Cheung Music Video": "Marcus Cheung",
         "Nathan Tsui Music Video": "Nathan Tsui",
-        "Huanyun Tommy Zhang Music Video": "Huanyun Tommy Zhang",
+        "Audrey Au Music Video": "Audrey Au",
       };
 
       const links = {
-        "Teddy Cheng Music Video":
-          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
-        "Audrey Au Music Video":
-          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
-        "Ethan Lee Music Video":
-          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
-        "Ian Cho Music Video":
-          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
-        "Ethan Lam Music Video":
-          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
-        "Felicia Chu Music Video":
-          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
-        "Hay Yin Keefe Yip Music Video":
-          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
+        "Abby Yu Music Video":
+          "https://drive.google.com/file/d/1MxDToUHEmRW-T1GdFKpAqNL6mSMfRK8m/preview?usp=drive_link", 
+        "Caitlyn Cheung Music Video":
+          "https://drive.google.com/file/d/10fo7JvvNe_Ix9LFvE7Hq5uDSIbeL42bM/preview?usp=drive_link", 
         "Curtis Wong Music Video":
-          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
-        "Jonas Chiu Music Video":
-          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
-        "Emmanuel Wong Music Video":
-          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
-        "Tin Yat Javen Hooi Music Video":
-          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
-        "Shing Hei Elvis Cheng Music Video":
-          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
-        "Kit Man Chester Tam Music Video":
-          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
+          "https://drive.google.com/file/d/1L2i12U4BzuZD_WKnD6o4usFo1H3O1Zgh/preview?usp=drive_link", 
+        "Everest Cannon Music Video":
+          "https://drive.google.com/file/d/1Zm3RncIJG5yUa1gZDYLoOZS32_tGu9n9/preview?usp=drive_link", 
+        "Felicia Chiu Music Video":
+          "https://drive.google.com/file/d/1Bt0SAf6VdOR4dOnHCo74LBur3w8DQoaf/preview?usp=drive_link", 
+        "Jasper Lee Music Video":
+          "https://drive.google.com/file/d/1ghj5MkJGlXyew-FD3mW71rFL-r0UeTMx/preview?usp=drive_link", 
+        "Krystal Lam Music Video":
+          "https://drive.google.com/file/d/19bX-zACRkpyXpjGnMtSIdtmJYZtOvTHh/preview?usp=drive_link", 
+        "Marcus Cheung Music Video":
+          "https://drive.google.com/file/d/1FdF6d1O3RfvjyEN2-pELufGnQqvi4269/preview?usp=drive_link", 
         "Nathan Tsui Music Video":
-          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
-        "Huanyun Tommy Zhang Music Video":
-          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",                          
+          "https://drive.google.com/file/d/1Pdjci66ytL-yuNiXpCQWsZG-03q67waf/preview?usp=drive_link", 
+        "Audrey Au Music Video":
+          "https://drive.google.com/file/d/14WxIr8iuPSeIYrNw_x0LAKlpWU9gAj7R/preview?usp=drive_link",                      
       };
 
       const projects = [
-        "Teddy Cheng Music Video",
-        "Audrey Au Music Video",
-        "Ethan Lee Music Video",
-        "Ian Cho Music Video",
-        "Ethan Lam Music Video",
-        "Felicia Chu Music Video",
-        "Hay Yin Keefe Yip Music Video",
+        "Abby Yu Music Video",
+        "Caitlyn Cheung Music Video",
         "Curtis Wong Music Video",
-        "Jonas Chiu Music Video",
-        "Emmanuel Wong Music Video",
-        "Tin Yat Javen Hooi Music Video",
-        "Shing Hei Elvis Cheng Music Video",
-        "Kit Man Chester Tam Music Video",
+        "Everest Cannon Music Video",
+        "Felicia Chiu Music Video",
+        "Jasper Lee Music Video",
+        "Krystal Lam Music Video",
+        "Marcus Cheung Music Video",
         "Nathan Tsui Music Video",
-        "Huanyun Tommy Zhang Music Video",
+        "Audrey Au Music Video",
       ];
 
       const cardContainer = document.getElementById("cardContainer");
