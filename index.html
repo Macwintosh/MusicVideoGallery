@@ -2,281 +2,256 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="images/P-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Private Class Student Projects - Preface</title>
+    <title>Music Video Creation with AI - Preface</title>
     <style>
       body {
         font-family: "Montserrat", sans-serif;
-
-        margin: 0 auto;
-        background-color: #f0f0f0;
-      }
-
-      .sticky {
         margin: 0;
         padding: 0;
-        overflow: hidden;
-        background-color: #ffffff;
-        position: -webkit-sticky; /* Safari */
-        position: sticky;
-        top: 0;
-        z-index: 100; /* Ensure the navbar is above other content */
+        background-color: #f4f4f9;
+        color: #333;
       }
+
+      header {
+        text-align: center;
+        background-color: white;
+        padding: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
       h1 {
         text-align: center;
         color: #404041;
-        margin-top: 60px;
+        margin-top: 20px;
         padding: 10px;
-      }
-      h2 {
-        font-size: 1em;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 20px;
-      }
-      h3 {
-        text-align: center;
-        padding: 10px;
-        color: #404041;
       }
 
-      .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      ul {
-        list-style-type: none;
-        padding: 0;
-      }
-      li {
-        margin-bottom: 10px;
-      }
-      a {
-        text-decoration: none;
-        color: #85bcce;
-        transition: color 0.3s ease;
-      }
-      a:hover {
-        color: #0056b3;
-      }
       .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 20px;
       }
+
       .card {
-        width: 200px;
-        margin: 10px;
-        text-align: center;
         background-color: white;
-        color: #404041;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        overflow: hidden;
+        transition: transform 0.3s;
+        width: calc(33.333% - 40px); /* Adjust width and margin */
+        box-sizing: border-box;
+      }
 
-        transition: transform 0.3s ease;
-      }
       .card:hover {
-        transform: translateY(-5px);
+        transform: translateY(-10px);
       }
+
       .card img {
         width: 100%;
-        height: 150px;
+        height: 200px;
         object-fit: cover;
+      }
 
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+      .card h2 {
+        font-size: 1.5em;
+        margin: 10px;
       }
+
       .card h4 {
-        color: #6d6d6d;
-        padding-bottom: 20px;
-        font-size: 0.8em;
+        font-size: 1em;
+        margin: 10px;
+        color: #666;
       }
-      .card p {
+
+      .card-text {
         padding: 10px;
-        margin: 0;
       }
-      .text-center {
-        text-align: center;
+
+      @media (max-width: 768px) {
+        .card {
+          width: calc(50% - 40px); /* Adjust width for smaller screens */
+        }
       }
-      .toggle-view {
-        display: block;
-        margin: 20px auto;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-      .toggle-view:hover {
-        background-color: #0056b3;
-      }
-      .hidden {
-        display: none;
+
+      @media (max-width: 480px) {
+        .card {
+          width: calc(100% - 40px); /* Adjust width for mobile screens */
+        }
       }
     </style>
   </head>
   <body>
-    <header style="text-align: center; background-color: white; width: 100%">
+    <header>
       <img
         src="images/Preface logo_grey.png"
         alt="Preface Logo Grey"
-        style="width: 100%; max-width: 300px; background-color: white"
+        style="width: 100%; max-width: 300px"
       />
     </header>
 
-    <h1>Private Class Student Project Library</h1>
+    <h1>Music Video Creation Gallery</h1>
 
     <div id="cardContainer" class="container"></div>
     <script>
       const imageMap = {
-        "Minecraft-inspired Arcade Game": "images/Ellie Wong.png",
-        "Tetris in Chrome extension": "images/Kayley Kwok.png",
-        "MTR project": "images/Ka Him.JPG",
-        "Space Invader": "images/Chester.png",
-        "Comic Nostalgia Gang": "images/Caleb.png",
-        "Memory Game": "images/Emma - Memory.png",
-        Portfolio: "images/Emma.jpeg",
-        ChatApp: "images/Neo.png",
-        "One Piece Quiz": "images/Junghu.jpeg",
-        "Recycling Game": "images/EthanZheng.jpeg",
-        "NBA Data Analysis": "images/Elvin Cheung - NBA.jpeg",
-        "2048 game": "images/Elvin Cheung - 2048.png",
-        "Liverpool Website": "images/Jayden Heng.png",
-        FUNLAND: "images/Alicia.png",
-        "Amelia's Station": "images/Amelia.png",
-        "School Club Slides made by Kelbee!": "images/Kelbee.png",
-        "Treasure Hunt": "images/Enoch Chiu.png",
-        "Be a Little YouTuber": "images/Gareth-video.png",
-        "Football Analysis": "images/Ethan Yip.png",
-        "Save The Ocean - Julien's Twist": "images/Julien Tsang.png",
-        "Snake Game": "images/Roy Chi.png",
-        "Card Game": "images/Nok Yin.png",
-        "Portfolio Website": "images/Evan Lam.png",
-        "App Inventor Game": "images/Marquis.png",
-        Wordle: "images/Tyler.png",
-        "Tennis Web Scrapping": "images/TylerTennis.png",
+        "Abby Yu Music Video": "images/Abby Yu.png",
+        "Caitlyn Cheung Music Video": "images/Caitlyn Cheung.png",
+        "Curtis Wong Music Video": "images/Curtis Wong.png",
+        "Everest Cannon Music Video": "images/Everest Cannon.png",
+        "Felicia Chiu Music Video": "images/Felicia Chiu.png",
+        "Jasper Lee Music Video": "images/Jasper Lee.png",
+        "Krystal Lam Music Video": "images/Krystal Lam.png",
+        "Marcus Cheung Music Video": "images/Marcus Cheung.png",
+        "Nathan Tsui Music Video": "images/Nathan Tsui.png",
+        "Audrey Au Music Video": "images/Audrey Au.png",
+        "Seth Hoi Music Video": "images/Seth Hoi.png",
+        "Teddy Cheng Music Video": "images/Teddy Cheng.png",
+        "Ethan Lee Music Video": "images/Ethan Lee.png",
+        "Ian Choi Music Video": "images/Ian Choi.png",
+        "Ethan Lam  Music Video": "images/Ethan Lam.jpg",
+        "Keefe Yip Music Video": "images/Keefe Yip.jpg",
+        "Jonas Chiu Music Video": "images/Jonas Chiu.png",
+        "Emmanuel Wong Music Video": "images/Emmanuel Wong.png",
+        "Tin Yat Javen Hooi Music Video": "images/Tin Yat Javen Hooi.png",
+        "Elgar Lam Music Video": "images/Elgar Lam.jpg",
+        "Sek Ching Isabella Li Music Video": "images/Sek Ching Isabella Li.png",
+        "Shing Hei Elvis Cheng Music Video": "images/Shing Hei Elvis Cheng.jpg",
+        "Kit Man Chester Tam Music Video": "images/Kit Man Chester Tam.png",
+        "Trevor Wong Music Video": "images/Trevor Wong.jpg",
+        "Ansley On Music Video": "images/Ansley On.png",
+        "Huanyun Tommy Zhang Music Video": "images/Huanyun Tommy Zhang.jpg",
       };
 
       const studentNames = {
-        "Minecraft-inspired Arcade Game": "Ellie Wong",
-        "Tetris in Chrome extension": "Kayley Kwok",
-        "MTR project": "Ka Him Leung",
-        "Space Invader": "Chester Tam",
-        "Comic Nostalgia Gang": "Caleb Hui",
-        "Memory Game": "Emma Hunt",
-        Portfolio: "Emma Hunt",
-        ChatApp: "Neo Lung",
-        "One Piece Quiz": "JungHu",
-        "Recycling Game": "Ethan Zheng",
-        "NBA Data Analysis": "Elvin Cheung",
-        "2048 game": "Elvin Cheung",
-        "Liverpool Website": "Jayden Heng",
-        FUNLAND: "Alicia Tan",
-        "Amelia's Station": "Amelia Tan",
-        "School Club Slides made by Kelbee!": "Kelbee Fok",
-        "Treasure Hunt": "Enoch Chiu",
-
-        "Be a Little YouTuber": "Gareth Li",
-        "Football Analysis": "Ethan Yip",
-        "Save The Ocean - Julien's Twist": "Julien Tsang",
-        "Snake Game": "Roy Chi",
-        "Card Game": "Nok Yin Lim",
-        "Portfolio Website": "Evan Lam",
-        "App Inventor Game": "Marquis Chan",
-        Wordle: "Tyler Takahashi",
-        "Tennis Web Scrapping": "Tyler Takahashi",
+        "Abby Yu Music Video": "Abby Yu",
+        "Caitlyn Cheung Music Video": "Caityln Cheung",
+        "Curtis Wong Music Video": "Curtis Wong",
+        "Everest Cannon Music Video": "Everest Cannon",
+        "Felicia Chiu Music Video": "Felicia Chiu",
+        "Jasper Lee Music Video": "Jasper Lee",
+        "Krystal Lam Music Video": "Krystal Lam",
+        "Marcus Cheung Music Video": "Marcus Cheung",
+        "Nathan Tsui Music Video": "Nathan Tsui",
+        "Audrey Au Music Video": "Audrey Au",
+        "Seth Hoi Music Video": "Seth Hoi",
+        "Teddy Cheng Music Video": "Teddy Cheng",
+        "Ethan Lee Music Video": "Ethan Lee",
+        "Ian Choi Music Video": "Ian Choi",
+        "Ethan Lam  Music Video": "Ethan Lam",
+        "Keefe Yip Music Video": "Keefe Yip",
+        "Jonas Chiu Music Video": "Jonas Chiu",
+        "Emmanuel Wong Music Video": "Emmanuel Wong",
+        "Tin Yat Javen Hooi Music Video": "Tin Yat Javen Hooi",
+        "Elgar Lam Music Video": "Elgar Lam",
+        "Sek Ching Isabella Li Music Video": "Sek Ching Isabella Li",
+        "Shing Hei Elvis Cheng Music Video": "Shing Hei Elvis Cheng",
+        "Kit Man Chester Tam Music Video": "Kit Man Chester Tam",
+        "Trevor Wong Music Video": "Trevor Wong",
+        "Ansley On Music Video": "Ansley On",
+        "Huanyun Tommy Zhang Music Video": "Huanyun Tommy Zhang",
       };
 
       const links = {
-        "Minecraft-inspired Arcade Game":
-          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/preview",
-        "Tetris in Chrome extension":
-          "https://chromewebstore.google.com/detail/sirtet/ihladjbfkfejijomgfncgjgdlkaggkie",
-        "MTR project": "https://stevenleung124.itch.io/hkr-on-the-go",
-        "Space Invader": "https://chestnut-god.itch.io/space-invaders",
-        "Comic Nostalgia Gang": "https://bit.ly/comicNostalgiaGang",
-        "Memory Game": "https://227560em.github.io/Memory-Game/",
-        Portfolio: "https://227560em.github.io/Web-Development-Portfolio/",
-        ChatApp:
-          "https://drive.google.com/file/d/1VcyvbGewM8lwsHaGgsAvjZJDmTIAetyQ/preview",
-        "One Piece Quiz":
-          "https://drive.google.com/file/d/1TreneblRvCLq1KQedwjc6mdfcbijD7E4/preview",
-        "Recycling Game": "https://scratch.mit.edu/projects/1132224587",
-        "NBA Data Analysis":
-          "https://drive.google.com/file/d/1WKo9cmM-KeUHwm8oHgKpHq0WDRBPyH0N/preview",
-        "2048 game": "https://2048-sepia-nine.vercel.app/",
-        "Liverpool Website": "https://liverpooldream.netlify.app/",
-        FUNLAND: "https://scratch.mit.edu/projects/984574965/",
-        "Amelia's Station": "https://scratch.mit.edu/projects/970033341/",
-        "School Club Slides made by Kelbee!":
-          "https://docs.google.com/presentation/d/1tm6m9VoGVDXiYpaz4RsWElh671dvYel0tFItPimkpDU/edit#slide=id.p1",
-        "Treasure Hunt": "https://enochc.itch.io/treasure-hunt",
-
-        "Be a Little YouTuber":
-          "https://drive.google.com/file/d/12T7uTmajt-_Q6xSQvW3x0OVGquH6mJv5/preview",
-        "Football Analysis":
-          "https://drive.google.com/file/d/1WGZFeiG0CK92lczet-RmaW9gjvWqzk3P/preview",
-        "Save The Ocean - Julien's Twist":
-          "https://drive.google.com/file/d/1mQ737Y0kdhQ0yqCoyoB66Ul9xpZo9JNn/preview",
-        "Snake Game":
-          "https://drive.google.com/file/d/19HIFME8Vv_G3duqMRhUNDvrsA4TL65dQ/preview",
-        "Card Game":
-          "https://drive.google.com/file/d/1l5nrIdMVbeSCowkJLF059-cTDTGuh5BC/preview",
-        "Portfolio Website": "https://superel123.github.io/Portfolio/",
-        "App Inventor Game":
-          "https://drive.google.com/file/d/1CtefFzzBEvCwWhul7xNKYACjcMhcb2v1/preview",
-        Wordle: "https://siuwai0914.itch.io/wordle",
-        "Tennis Web Scrapping":
-          "https://drive.google.com/file/d/1w925LanZfeB46kjR3E2WHUIXpEFJDvli/preview",
+        "Abby Yu Music Video":
+          "https://drive.google.com/file/d/1MxDToUHEmRW-T1GdFKpAqNL6mSMfRK8m/preview?usp=drive_link", 
+        "Caitlyn Cheung Music Video":
+          "https://drive.google.com/file/d/10fo7JvvNe_Ix9LFvE7Hq5uDSIbeL42bM/preview?usp=drive_link", 
+        "Curtis Wong Music Video":
+          "https://drive.google.com/file/d/1L2i12U4BzuZD_WKnD6o4usFo1H3O1Zgh/preview?usp=drive_link", 
+        "Everest Cannon Music Video":
+          "https://drive.google.com/file/d/1Zm3RncIJG5yUa1gZDYLoOZS32_tGu9n9/preview?usp=drive_link", 
+        "Felicia Chiu Music Video":
+          "https://drive.google.com/file/d/1Bt0SAf6VdOR4dOnHCo74LBur3w8DQoaf/preview?usp=drive_link", 
+        "Jasper Lee Music Video":
+          "https://drive.google.com/file/d/1ghj5MkJGlXyew-FD3mW71rFL-r0UeTMx/preview?usp=drive_link", 
+        "Krystal Lam Music Video":
+          "https://drive.google.com/file/d/19bX-zACRkpyXpjGnMtSIdtmJYZtOvTHh/preview?usp=drive_link", 
+        "Marcus Cheung Music Video":
+          "https://drive.google.com/file/d/1FdF6d1O3RfvjyEN2-pELufGnQqvi4269/preview?usp=drive_link", 
+        "Nathan Tsui Music Video":
+          "https://drive.google.com/file/d/1Pdjci66ytL-yuNiXpCQWsZG-03q67waf/preview?usp=drive_link", 
+        "Audrey Au Music Video":
+          "https://drive.google.com/file/d/14WxIr8iuPSeIYrNw_x0LAKlpWU9gAj7R/preview?usp=drive_link",
+        "Seth Hoi Music Video":
+          "https://drive.google.com/file/d/1O6RMwQlwB03arqTPyViGI0fzTcYi3eJG/preview?usp=drive_link",
+        "Teddy Cheng Music Video":
+          "https://drive.google.com/file/d/131QVvqRKKGZCgGgzXFUFwF6SDsTwYqKu/preview?usp=drive_link",
+        "Ethan Lee Music Video":
+          "https://drive.google.com/file/d/12m6YLsSKXbO-0qSN8wmozH4NCi_Wdnh1/preview?usp=drive_link",
+        "Ian Choi Music Video":
+          "https://drive.google.com/file/d/18bQDnlRDzZIvIFBZMsBYx1bmjrgqH0a5/preview?usp=drive_link",
+        "Ethan Lam  Music Video":
+          "https://drive.google.com/file/d/1SYzet4Qb-KrRRYXs0-KA9trPBmgOaVd6/preview?usp=drive_link",
+        "Keefe Yip Music Video":
+          "https://drive.google.com/file/d/1d-B7wozkL64O9EVAaN8o8VSwkFckgCw8/preview?usp=drive_link",
+        "Jonas Chiu Music Video":
+          "https://drive.google.com/file/d/10xuiy3QaouYvwZUozLXPENfZQS-_Mfsy/preview?usp=drive_link",
+        "Emmanuel Wong Music Video":
+          "https://drive.google.com/file/d/1L-Cf4HTyhBdHRFCBGrjoAjxu8an18Mr9/preview?usp=drive_link",
+        "Tin Yat Javen Hooi Music Video": 
+          "https://drive.google.com/file/d/1qA38HNlg5CSQZpbFZ3N-VAIgTjoQOZLR/preview?usp=drive_link",
+        "Elgar Lam Music Video": 
+          "https://drive.google.com/file/d/1nxHOgdr7zz1yFaXkUW_f2Z9XhbbYGUAp/preview?usp=drive_link",
+        "Sek Ching Isabella Li Music Video": 
+          "https://drive.google.com/file/d/1V-9UmMp365xQVTKvd9ZxrCtFs8ICmflf/preview?usp=drive_link",
+        "Shing Hei Elvis Cheng Music Video": 
+          "https://drive.google.com/file/d/1SSU_8GvYTLA8OHlRmUyVaksiwEfypx6V/preview?usp=drive_link",
+        "Kit Man Chester Tam Music Video": 
+          "https://drive.google.com/file/d/1uxAbAIgT6nn0XFW2NFplCBohRBibbu5W/preview?usp=drive_link",
+        "Trevor Wong Music Video": 
+          "https://drive.google.com/file/d/1DqJMDow0V61vBIuazRfUdspIdEoTvc0O/preview?usp=drive_link",
+        "Ansley On Music Video": 
+          "https://drive.google.com/file/d/11Do4wcgWnxVEwZQ5I_YgDEuay6mM3dCs/preview?usp=drive_link",
+        "Huanyun Tommy Zhang Music Video": 
+          "https://drive.google.com/file/d/1ymuHinVdYxqH_nRreqtSQWMEUo9T-gOD/preview?usp=drive_link",
       };
 
       const projects = [
-        "Minecraft-inspired Arcade Game",
-        "Tetris in Chrome extension",
-        "MTR project",
-        "Space Invader",
-        "Comic Nostalgia Gang",
-        "Memory Game",
-        "Portfolio",
-        "ChatApp",
-        "One Piece Quiz",
-        "Recycling Game",
-        "NBA Data Analysis",
-        "2048 game",
-        "Liverpool Website",
-        "FUNLAND",
-        "Amelia's Station",
-        "School Club Slides made by Kelbee!",
-        "Treasure Hunt",
-
-        "Be a Little YouTuber",
-        "Football Analysis",
-        "Save The Ocean - Julien's Twist",
-        "Snake Game",
-        "Card Game",
-        "Portfolio Website",
-        "App Inventor Game",
-        "Wordle",
-        "Tennis Web Scrapping",
+        "Abby Yu Music Video",
+        "Caitlyn Cheung Music Video",
+        "Curtis Wong Music Video",
+        "Everest Cannon Music Video",
+        "Felicia Chiu Music Video",
+        "Jasper Lee Music Video",
+        "Krystal Lam Music Video",
+        "Marcus Cheung Music Video",
+        "Nathan Tsui Music Video",
+        "Audrey Au Music Video",
+        "Seth Hoi Music Video",
+        "Teddy Cheng Music Video",
+        "Ethan Lee Music Video",
+        "Ian Choi Music Video",
+        "Ethan Lam  Music Video",
+        "Keefe Yip Music Video",
+        "Jonas Chiu Music Video",
+        "Emmanuel Wong Music Video",
+        "Tin Yat Javen Hooi Music Video",
+        "Elgar Lam Music Video",
+        "Sek Ching Isabella Li Music Video",
+        "Shing Hei Elvis Cheng Music Video",
+        "Kit Man Chester Tam Music Video",
+        "Trevor Wong Music Video",
+        "Ansley On Music Video",
+        "Huanyun Tommy Zhang Music Video",
       ];
 
       const cardContainer = document.getElementById("cardContainer");
 
       projects.forEach((project) => {
         const card = document.createElement("div");
-        card.className = "card";
+        card.classList.add("card");
 
         const link = document.createElement("a");
         link.href = links[project];
@@ -284,6 +259,7 @@
 
         const image = document.createElement("img");
         image.src = imageMap[project];
+        image.alt = project;
         link.appendChild(image);
 
         card.appendChild(link);
@@ -294,6 +270,7 @@
 
         const subtitle = document.createElement("h4");
         subtitle.textContent = studentNames[project];
+        subtitle.classList.add("card-text");
         card.appendChild(subtitle);
 
         cardContainer.appendChild(card);
